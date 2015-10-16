@@ -8,8 +8,10 @@ Web Server Gateway Interface (WSGI)
 
 The **app instance is** an object of the Class Flask. It is usually created as follow:
 
+```python
 from flask import Flask
 app = Flask(__name__)
+```
 
 2)**Routes and View Functions:** the client sends requests to the web server, who in turn sends them to
 the **app instance**. The app instance keeps a map of URLs (received from the web server - clients requests)
