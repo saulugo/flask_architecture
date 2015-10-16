@@ -41,3 +41,19 @@ you must use the following syntax in the route decorator:
 def user(name):
 	return '<h1>Hello, %s!</h1>' % name
 ```
+The the URL match the fix portion will call the view function (user(name)) and send the URL part enclosed in the angle
+brackets as a argument of the view function.
+
+Also, the dynamic part of the URL, supports type definition. For example the route */user/<int:id>* will accept
+only integers as the id.
+
+Flask supports *int, float* and *path* class for the routes. The *path* type is a string but does not 
+take the slashes as separators but as part of the dynamic content.
+
+3)**Server Startup:** the application instance has the *run* method that launches 
+Flask's integrated development web server.
+
+```python
+if __name__ = '__main__'
+	app.run(debug=True)
+```
